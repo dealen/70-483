@@ -42,8 +42,11 @@
   <ItemGroup>
     <Compile Include="BackgroundThrearTest.cs" />
     <Compile Include="Helpers\IRun.cs" />
+    <Compile Include="Helpers\StaticValues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StopingThread.cs" />
+    <Compile Include="Tasks\ChildTasks.cs" />
+    <Compile Include="Tasks\TaskFactorySample.cs" />
     <Compile Include="Tasks\TasksBasics.cs" />
     <Compile Include="ThreadLocalData.cs" />
     <Compile Include="ThreadPoolTests.cs" />
