@@ -25,8 +25,7 @@ namespace ThreadingAndMultitasking.Tasks
 
         private void SimpleContinueWithSample()
         {
-            MethodBase m = MethodBase.GetCurrentMethod();
-            Console.WriteLine($"{StaticValues.MethodHeader} {m.Name}");
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
             Task t = Task.Run(() =>
             {
                 for (int i = 0; i < 100; i++)
@@ -61,8 +60,7 @@ namespace ThreadingAndMultitasking.Tasks
 
         private void ContinueWithTaskParameters()
         {
-            MethodBase m = MethodBase.GetCurrentMethod();
-            Console.WriteLine($"{StaticValues.MethodHeader} {m.Name}");
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
             Task<int> t = Task.Run(() =>
             {
                 return 42;
@@ -92,8 +90,7 @@ namespace ThreadingAndMultitasking.Tasks
         /// </summary>
         private void SimplaTasksWithWaitAll()
         {
-            MethodBase m = MethodBase.GetCurrentMethod();
-            Console.WriteLine($"{StaticValues.MethodHeader} {m.Name}");
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
             Task[] tasks = new Task[3];
 
             tasks[0] = Task.Run(() =>
@@ -120,8 +117,7 @@ namespace ThreadingAndMultitasking.Tasks
 
         private void SimplaTasksWithWaitAny()
         {
-            MethodBase m = MethodBase.GetCurrentMethod();
-            Console.WriteLine($"{StaticValues.MethodHeader} {m.Name}");
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
             Task<int>[] tasks = new Task<int>[3];
 
             tasks[0] = Task.Run(() =>

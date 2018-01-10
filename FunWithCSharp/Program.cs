@@ -1,7 +1,9 @@
 ﻿using FunWithCSharp.Classes;
 using System;
 using ThreadingAndMultitasking;
+using ThreadingAndMultitasking.AsyncAwait;
 using ThreadingAndMultitasking.Helpers;
+using ThreadingAndMultitasking.ParallelClass;
 using ThreadingAndMultitasking.Tasks;
 
 namespace FunWithCSharp
@@ -13,12 +15,26 @@ namespace FunWithCSharp
             //StructTest();
             //ReferenceTypeAssignment();
 
-            SimpleThreads();
-            SimpleTasks();
+            //SimpleThreads();
+            //SimpleTasks();
 
+            Parallel();
+            AsyncAndAwait();
 
             Console.WriteLine("Press enter");
             Console.ReadLine();
+        }
+
+        public static void AsyncAndAwait()
+        {
+            AsyncAndAwait aaa = new AsyncAndAwait();
+            aaa.Run();
+        }
+
+        public static void Parallel()
+        {
+            ParallelLoops pl = new ParallelLoops();
+            pl.Run();
         }
 
         public static void SimpleTasks()

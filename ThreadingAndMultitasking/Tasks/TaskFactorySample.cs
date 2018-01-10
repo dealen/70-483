@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using ThreadingAndMultitasking.Helpers;
@@ -17,6 +18,7 @@ namespace ThreadingAndMultitasking.Tasks
 
         private void SimpleFactory()
         {
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
             Task<Int32[]> parent = Task.Run(() =>
             {
                 var result = new Int32[3];
