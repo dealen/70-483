@@ -25,6 +25,12 @@ namespace FunWithCSharp
         {
             IRun tb = new TasksBasics();
             tb.Run();
+
+            IRun ct = new ChildTasks();
+            ct.Run();
+
+            IRun tfs = new TaskFactorySample();
+            tfs.Run();
         }
 
         public static void SimpleThreads()
