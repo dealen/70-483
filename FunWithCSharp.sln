@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithCSharp", "FunWithCSharp\FunWithCSharp.csproj", "{F707F592-30B5-4069-9F23-FEB4188B27D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadingAndMultitasking", "ThreadingAndMultitasking\ThreadingAndMultitasking\ThreadingAndMultitasking.csproj", "{A0128C4B-500F-4D76-AFF6-9A3D88979AF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadingAndMultitasking", "ThreadingAndMultitasking\ThreadingAndMultitasking.csproj", "{A0128C4B-500F-4D76-AFF6-9A3D88979AF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

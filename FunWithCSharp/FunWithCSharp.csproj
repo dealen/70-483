@@ -51,7 +51,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ThreadingAndMultitasking\ThreadingAndMultitasking\ThreadingAndMultitasking.csproj">
+    <ProjectReference Include="..\ThreadingAndMultitasking\ThreadingAndMultitasking.csproj">
       <Project>{a0128c4b-500f-4d76-aff6-9a3d88979af6}</Project>
       <Name>ThreadingAndMultitasking</Name>
     </ProjectReference>
