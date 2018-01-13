@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using ThreadingAndMultitasking.Helpers;
@@ -16,6 +17,7 @@ namespace ThreadingAndMultitasking.Tasks
 
         private void SimpleChildTasks()
         {
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
             Task<Int32[]> parent = Task.Run(() =>
             {
                 var results = new Int32[3];

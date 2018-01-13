@@ -40,9 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsyncAwait\AsyncAndAwait.cs" />
     <Compile Include="BackgroundThrearTest.cs" />
     <Compile Include="Helpers\IRun.cs" />
     <Compile Include="Helpers\StaticValues.cs" />
+    <Compile Include="ParallelClass\ParallelLoops.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StopingThread.cs" />
     <Compile Include="Tasks\ChildTasks.cs" />
@@ -52,8 +54,6 @@
     <Compile Include="ThreadPoolTests.cs" />
     <Compile Include="ThreadStaticAttributeTest.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ParallelClass\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

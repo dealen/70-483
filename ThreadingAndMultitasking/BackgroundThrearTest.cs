@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace ThreadingAndMultitasking
     {
         private void Counter()
         {
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine($"ThreadProc: {i}");
@@ -21,6 +23,7 @@ namespace ThreadingAndMultitasking
 
         private void CounterWithParameter(object count)
         {
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
             int cnt = int.Parse(count.ToString());
             for (int i = 0; i < cnt; i++)
             {
