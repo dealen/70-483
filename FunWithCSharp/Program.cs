@@ -2,8 +2,10 @@
 using System;
 using ThreadingAndMultitasking;
 using ThreadingAndMultitasking.AsyncAwait;
+using ThreadingAndMultitasking.ConcurrentCollections;
 using ThreadingAndMultitasking.Helpers;
 using ThreadingAndMultitasking.ParallelClass;
+using ThreadingAndMultitasking.PLINQ;
 using ThreadingAndMultitasking.Tasks;
 
 namespace FunWithCSharp
@@ -18,11 +20,26 @@ namespace FunWithCSharp
             //SimpleThreads();
             //SimpleTasks();
 
-            Parallel();
-            AsyncAndAwait();
+            //Parallel();
+            //AsyncAndAwait();
+
+            //PlinqSamples();
+            ConcurrentCollectionsSamples();
 
             Console.WriteLine("Press enter");
             Console.ReadLine();
+        }
+
+        public static void ConcurrentCollectionsSamples()
+        {
+            ConcurrentCollectionsSamples c = new ConcurrentCollectionsSamples();
+            c.Run();
+        }
+
+        public static void PlinqSamples()
+        {
+            PLinqSamples pl = new PLinqSamples();
+            pl.Run();
         }
 
         public static void AsyncAndAwait()
