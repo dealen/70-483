@@ -97,5 +97,12 @@ namespace TasksInWPF4
         {
 
         }
+
+        private void okButton2_Click(object sender, RoutedEventArgs e)
+        {
+            //var client = new WebClient();
+
+            //string 
+        }
     }
 }
