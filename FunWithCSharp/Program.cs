@@ -1,4 +1,5 @@
 ﻿using FunWithCSharp.Classes;
+using SynchronizingResources;
 using System;
 using ThreadingAndMultitasking;
 using ThreadingAndMultitasking.AsyncAwait;
@@ -17,6 +18,9 @@ namespace FunWithCSharp
             //StructTest();
             //ReferenceTypeAssignment();
 
+
+            // 1.1
+
             //SimpleThreads();
             //SimpleTasks();
 
@@ -24,33 +28,54 @@ namespace FunWithCSharp
             //AsyncAndAwait();
 
             //PlinqSamples();
-            ConcurrentCollectionsSamples();
+
+            //ConcurrentCollectionsSamples();
+            //ConcurrentBagSamples();
+            //ConcurrentStackAndQueueSamples();
+
+            // 1.2
+
+            SynchResourcesSamplesTest();
 
             Console.WriteLine("Press enter");
             Console.ReadLine();
         }
 
+        #region 1.1. Implementing Multithreading
+
+        public static void ConcurrentStackAndQueueSamples()
+        {
+            IRun sq = new ConcurrentStackAndQueue();
+            sq.Run();
+        }
+
+        public static void ConcurrentBagSamples()
+        {
+            IRun cb = new ConcurrentBagTests();
+            cb.Run();
+        }
+
         public static void ConcurrentCollectionsSamples()
         {
-            ConcurrentCollectionsSamples c = new ConcurrentCollectionsSamples();
+            IRun c = new ConcurrentCollectionsSamples();
             c.Run();
         }
 
         public static void PlinqSamples()
         {
-            PLinqSamples pl = new PLinqSamples();
+            IRun pl = new PLinqSamples();
             pl.Run();
         }
 
         public static void AsyncAndAwait()
         {
-            AsyncAndAwait aaa = new AsyncAndAwait();
+            IRun aaa = new AsyncAndAwait();
             aaa.Run();
         }
 
         public static void Parallel()
         {
-            ParallelLoops pl = new ParallelLoops();
+            IRun pl = new ParallelLoops();
             pl.Run();
         }
 
@@ -83,6 +108,18 @@ namespace FunWithCSharp
             IRun tpt = new ThreadPoolTests();
             tpt.Run();           
         }
+
+        #endregion Implementing Multithreading
+
+        #region 2.2. Managing Multithreading
+
+        private static void SynchResourcesSamplesTest()
+        {
+            SynchResourcesSamples ss = new SynchResourcesSamples();
+            ss.Run();
+        }
+
+        #endregion
 
         public static void ReferenceTypeAssignment()
         {

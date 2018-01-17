@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using ThreadingAndMultitasking.Helpers;
@@ -18,6 +19,7 @@ namespace ThreadingAndMultitasking.ConcurrentCollections
 
         private void UsingBlockingCollection()
         {
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
             var col = new BlockingCollection<string>();
             Task read = Task.Run(() =>
             {
