@@ -1,4 +1,5 @@
 ﻿using FunWithCSharp.Classes;
+using SynchronizingResources;
 using System;
 using ThreadingAndMultitasking;
 using ThreadingAndMultitasking.AsyncAwait;
@@ -17,6 +18,9 @@ namespace FunWithCSharp
             //StructTest();
             //ReferenceTypeAssignment();
 
+
+            // 1.1
+
             //SimpleThreads();
             //SimpleTasks();
 
@@ -26,12 +30,18 @@ namespace FunWithCSharp
             //PlinqSamples();
 
             //ConcurrentCollectionsSamples();
-            ConcurrentBagSamples();
-            ConcurrentStackAndQueueSamples();
+            //ConcurrentBagSamples();
+            //ConcurrentStackAndQueueSamples();
+
+            // 1.2
+
+            SynchResourcesSamplesTest();
 
             Console.WriteLine("Press enter");
             Console.ReadLine();
         }
+
+        #region 1.1. Implementing Multithreading
 
         public static void ConcurrentStackAndQueueSamples()
         {
@@ -98,6 +108,18 @@ namespace FunWithCSharp
             IRun tpt = new ThreadPoolTests();
             tpt.Run();           
         }
+
+        #endregion Implementing Multithreading
+
+        #region 2.2. Managing Multithreading
+
+        private static void SynchResourcesSamplesTest()
+        {
+            SynchResourcesSamples ss = new SynchResourcesSamples();
+            ss.Run();
+        }
+
+        #endregion
 
         public static void ReferenceTypeAssignment()
         {
