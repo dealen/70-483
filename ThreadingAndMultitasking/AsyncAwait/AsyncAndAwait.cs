@@ -68,7 +68,5 @@ namespace ThreadingAndMultitasking.AsyncAwait
             t.Change(millisecondsTimeout, -1);
             return tcs.Task;
         }
-
-
     }
 }
