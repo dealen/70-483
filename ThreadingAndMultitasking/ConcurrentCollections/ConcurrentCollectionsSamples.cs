@@ -13,6 +13,7 @@ namespace ThreadingAndMultitasking.ConcurrentCollections
         public void Run()
         {
             UsingBlockingCollection();
+            UsingBlockingCollection2();
         }
 
         private void UsingBlockingCollection()
@@ -23,6 +24,30 @@ namespace ThreadingAndMultitasking.ConcurrentCollections
                 while (true)
                 {
                     Console.WriteLine(col.Take());
+                }
+            });
+
+            Task write = Task.Run(() =>
+            {
+                while (true)
+                {
+                    var s = Console.ReadLine();
+                    if (string.IsNullOrWhiteSpace(s)) break;
+                    col.Add(s);
+                }
+            });
+
+            write.Wait();
+        }
+
+        private void UsingBlockingCollection2()
+        {
+            var col = new BlockingCollection<string>();
+            Task read = Task.Run(() =>
+            {
+                foreach (string v in col.GetConsumingEnumerable())
+                {
+                    Console.WriteLine(v);
                 }
             });
 
