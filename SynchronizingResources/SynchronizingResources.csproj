@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F707F592-30B5-4069-9F23-FEB4188B27D1}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>FunWithCSharp</RootNamespace>
-    <AssemblyName>FunWithCSharp</AssemblyName>
+    <ProjectGuid>{F16C1F87-7861-4AFB-B442-8EF734639E18}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SynchronizingResources</RootNamespace>
+    <AssemblyName>SynchronizingResources</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,22 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\FunWithClasses.cs" />
-    <Compile Include="Classes\FunWithStructs.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="SynchResourcesSamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SynchronizingResources\SynchronizingResources.csproj">
-      <Project>{f16c1f87-7861-4afb-b442-8ef734639e18}</Project>
-      <Name>SynchronizingResources</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ThreadingAndMultitasking\ThreadingAndMultitasking.csproj">
-      <Project>{a0128c4b-500f-4d76-aff6-9a3d88979af6}</Project>
-      <Name>ThreadingAndMultitasking</Name>
+    <ProjectReference Include="..\HelpersLibrary\HelpersLibrary.csproj">
+      <Project>{12f855f9-1fd7-4228-9840-d8baeeb0b450}</Project>
+      <Name>HelpersLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
