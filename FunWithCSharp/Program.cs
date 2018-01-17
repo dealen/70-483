@@ -24,33 +24,48 @@ namespace FunWithCSharp
             //AsyncAndAwait();
 
             //PlinqSamples();
-            ConcurrentCollectionsSamples();
+
+            //ConcurrentCollectionsSamples();
+            ConcurrentBagSamples();
+            ConcurrentStackAndQueueSamples();
 
             Console.WriteLine("Press enter");
             Console.ReadLine();
         }
 
+        public static void ConcurrentStackAndQueueSamples()
+        {
+            IRun sq = new ConcurrentStackAndQueue();
+            sq.Run();
+        }
+
+        public static void ConcurrentBagSamples()
+        {
+            IRun cb = new ConcurrentBagTests();
+            cb.Run();
+        }
+
         public static void ConcurrentCollectionsSamples()
         {
-            ConcurrentCollectionsSamples c = new ConcurrentCollectionsSamples();
+            IRun c = new ConcurrentCollectionsSamples();
             c.Run();
         }
 
         public static void PlinqSamples()
         {
-            PLinqSamples pl = new PLinqSamples();
+            IRun pl = new PLinqSamples();
             pl.Run();
         }
 
         public static void AsyncAndAwait()
         {
-            AsyncAndAwait aaa = new AsyncAndAwait();
+            IRun aaa = new AsyncAndAwait();
             aaa.Run();
         }
 
         public static void Parallel()
         {
-            ParallelLoops pl = new ParallelLoops();
+            IRun pl = new ParallelLoops();
             pl.Run();
         }
 
