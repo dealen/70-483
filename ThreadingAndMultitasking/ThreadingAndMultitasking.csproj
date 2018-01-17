@@ -42,7 +42,10 @@
   <ItemGroup>
     <Compile Include="AsyncAwait\AsyncAndAwait.cs" />
     <Compile Include="BackgroundThrearTest.cs" />
+    <Compile Include="ConcurrentCollections\ConcurrentBagTests.cs" />
     <Compile Include="ConcurrentCollections\ConcurrentCollectionsSamples.cs" />
+    <Compile Include="ConcurrentCollections\ConcurrentDictinarySamples.cs" />
+    <Compile Include="ConcurrentCollections\ConcurrentStackAndQueue.cs" />
     <Compile Include="Helpers\IRun.cs" />
     <Compile Include="Helpers\StaticValues.cs" />
     <Compile Include="ParallelClass\ParallelLoops.cs" />
