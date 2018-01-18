@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ProgramFlow.cs" />
     <Compile Include="Classes\FunWithClasses.cs" />
     <Compile Include="Classes\FunWithStructs.cs" />
     <Compile Include="Program.cs" />

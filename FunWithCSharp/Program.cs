@@ -17,8 +17,7 @@ namespace FunWithCSharp
         {
             //StructTest();
             //ReferenceTypeAssignment();
-
-
+                        
             // 1.1
 
             //SimpleThreads();
@@ -36,6 +35,10 @@ namespace FunWithCSharp
             // 1.2
 
             SynchResourcesSamplesTest();
+
+            // 1.3
+
+            BooleanStatements();
 
             Console.WriteLine("Press enter");
             Console.ReadLine();
@@ -111,7 +114,7 @@ namespace FunWithCSharp
 
         #endregion Implementing Multithreading
 
-        #region 2.2. Managing Multithreading
+        #region 1.2. Managing Multithreading
 
         private static void SynchResourcesSamplesTest()
         {
@@ -120,6 +123,16 @@ namespace FunWithCSharp
         }
 
         #endregion
+
+        #region 1.3 Implement program flow
+
+        public static void BooleanStatements()
+        {
+            IRun run = new ProgramFlow();
+            run.Run();
+        }
+
+        #endregion 
 
         public static void ReferenceTypeAssignment()
         {
