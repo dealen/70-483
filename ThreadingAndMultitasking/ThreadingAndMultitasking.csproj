@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ThreadingAndMultitasking</RootNamespace>
     <AssemblyName>ThreadingAndMultitasking</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,8 +47,6 @@
     <Compile Include="ConcurrentCollections\ConcurrentCollectionsSamples.cs" />
     <Compile Include="ConcurrentCollections\ConcurrentDictinarySamples.cs" />
     <Compile Include="ConcurrentCollections\ConcurrentStackAndQueue.cs" />
-    <Compile Include="Helpers\IRun.cs" />
-    <Compile Include="Helpers\StaticValues.cs" />
     <Compile Include="ParallelClass\ParallelLoops.cs" />
     <Compile Include="PLINQ\PLinqSamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,6 +58,11 @@
     <Compile Include="ThreadPoolTests.cs" />
     <Compile Include="ThreadStaticAttributeTest.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\HelpersLibrary\HelpersLibrary.csproj">
+      <Project>{12f855f9-1fd7-4228-9840-d8baeeb0b450}</Project>
+      <Name>HelpersLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,13 +1,15 @@
 ﻿using FunWithCSharp.Classes;
+using HelpersLibrary;
+using ProgramFlow;
 using SynchronizingResources;
 using System;
 using ThreadingAndMultitasking;
 using ThreadingAndMultitasking.AsyncAwait;
 using ThreadingAndMultitasking.ConcurrentCollections;
-using ThreadingAndMultitasking.Helpers;
 using ThreadingAndMultitasking.ParallelClass;
 using ThreadingAndMultitasking.PLINQ;
 using ThreadingAndMultitasking.Tasks;
+using UsingDelegates;
 
 namespace FunWithCSharp
 {
@@ -34,11 +36,15 @@ namespace FunWithCSharp
 
             // 1.2
 
-            SynchResourcesSamplesTest();
+            //SynchResourcesSamplesTest();
 
             // 1.3
 
-            BooleanStatements();
+            //BooleanStatements();
+
+            // 1.4
+
+            UsingDelegatesBasics();
 
             Console.WriteLine("Press enter");
             Console.ReadLine();
@@ -128,11 +134,24 @@ namespace FunWithCSharp
 
         public static void BooleanStatements()
         {
-            IRun run = new ProgramFlow();
+            IRun run = new ProgramFlowClass();
             run.Run();
         }
 
-        #endregion 
+        #endregion
+
+        #region 1.4 Create and implement events and delegates
+
+        public static void UsingDelegatesBasics()
+        {
+            UsingDelegatesBasics a = new UsingDelegatesBasics();
+            a.Run();
+
+            IRun r = new MulticastDelegatesSample();
+            r.Run();
+        }
+
+        #endregion
 
         public static void ReferenceTypeAssignment()
         {

@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using HelpersLibrary;
+using System;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using ThreadingAndMultitasking.Helpers;
 
-namespace FunWithCSharp.Classes
+namespace ProgramFlow
 {
-    public class ProgramFlow : IRun
+    public class ProgramFlowClass : IRun
     {
         public void Run()
         {
@@ -56,7 +52,7 @@ namespace FunWithCSharp.Classes
         private void ForLoopWithMultipleVariables()
         {
             StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
-            for (int i = 0, y = 0; (i < 1000) && (y !=1); i++)
+            for (int i = 0, y = 0; (i < 1000) && (y != 1); i++)
             {
                 if (i == 50)
                 {

@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SynchronizingResources")]
+[assembly: AssemblyTitle("ProgramFlow")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SynchronizingResources")]
+[assembly: AssemblyProduct("ProgramFlow")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f16c1f87-7861-4afb-b442-8ef734639e18")]
+[assembly: Guid("81c23aa1-8615-4ea3-9fb0-db9d2f65cebf")]
 
 // Version information for an assembly consists of the following four values:
 //
