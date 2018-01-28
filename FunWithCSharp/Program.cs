@@ -1,4 +1,5 @@
-﻿using FunWithCSharp.Classes;
+﻿using EventsTests;
+using FunWithCSharp.Classes;
 using HelpersLibrary;
 using ProgramFlow;
 using SynchronizingResources;
@@ -10,6 +11,7 @@ using ThreadingAndMultitasking.ParallelClass;
 using ThreadingAndMultitasking.PLINQ;
 using ThreadingAndMultitasking.Tasks;
 using UsingDelegates;
+using UsingLambda;
 
 namespace FunWithCSharp
 {
@@ -45,6 +47,10 @@ namespace FunWithCSharp
             // 1.4
 
             UsingDelegatesBasics();
+
+            UsingLambdas();
+
+            EventsCalls();
 
             Console.WriteLine("Press enter");
             Console.ReadLine();
@@ -149,6 +155,33 @@ namespace FunWithCSharp
 
             IRun r = new MulticastDelegatesSample();
             r.Run();
+
+            IRun r1 = new CovarianceContrvarianceAndDelegates();
+            r1.Run();
+        }
+
+        public static void UsingLambdas()
+        {
+            IRun run = new UsingLambdaExpressions();
+            run.Run();
+        }
+
+        public static void EventsCalls()
+        {
+            IRun run = new EventsBasics();
+            run.Run();
+
+            IRun evt = new CustomEventHandler();
+            evt.Run();
+
+            IRun custom = new CustomEventAccess();
+            custom.Run();
+
+            IRun exp = new EventsWithExceptions();
+            exp.Run();
+
+            IRun eh = new EventsWithExceptionhandling();
+            eh.Run(); 
         }
 
         #endregion
