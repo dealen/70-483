@@ -29,6 +29,7 @@ namespace UsingDelegates
 
         public void Multicast()
         {
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
             Del d = MethodOne;
             d += MethodTwo;
             d();

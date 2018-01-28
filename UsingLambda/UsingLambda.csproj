@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F707F592-30B5-4069-9F23-FEB4188B27D1}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>FunWithCSharp</RootNamespace>
-    <AssemblyName>FunWithCSharp</AssemblyName>
+    <ProjectGuid>{B3A0E989-A27C-465B-898C-BFB9DDA5C4B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UsingLambda</RootNamespace>
+    <AssemblyName>UsingLambda</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,42 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\FunWithClasses.cs" />
-    <Compile Include="Classes\FunWithStructs.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="UsingLambdaExpressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EventsTests\EventsTests.csproj">
-      <Project>{156e427f-dfab-461e-bcad-eaecf160fae4}</Project>
-      <Name>EventsTests</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HelpersLibrary\HelpersLibrary.csproj">
       <Project>{12f855f9-1fd7-4228-9840-d8baeeb0b450}</Project>
       <Name>HelpersLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ProgramFlow\ProgramFlow.csproj">
-      <Project>{81c23aa1-8615-4ea3-9fb0-db9d2f65cebf}</Project>
-      <Name>ProgramFlow</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SynchronizingResources\SynchronizingResources.csproj">
-      <Project>{f16c1f87-7861-4afb-b442-8ef734639e18}</Project>
-      <Name>SynchronizingResources</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ThreadingAndMultitasking\ThreadingAndMultitasking.csproj">
-      <Project>{a0128c4b-500f-4d76-aff6-9a3d88979af6}</Project>
-      <Name>ThreadingAndMultitasking</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UsingDelegates\UsingDelegates.csproj">
-      <Project>{7730e816-919e-4be7-ab2d-4de5818f839e}</Project>
-      <Name>UsingDelegates</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UsingLambda\UsingLambda.csproj">
-      <Project>{b3a0e989-a27c-465b-898c-bfb9dda5c4b7}</Project>
-      <Name>UsingLambda</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
