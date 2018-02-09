@@ -37,7 +37,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
@@ -52,33 +51,41 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EventsTests\EventsTests.csproj">
+    <ProjectReference Include="..\Chapter 1\1.1\ThreadingAndMultitasking\ThreadingAndMultitasking.csproj">
+      <Project>{a0128c4b-500f-4d76-aff6-9a3d88979af6}</Project>
+      <Name>ThreadingAndMultitasking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chapter 1\1.2\ProgramFlow\ProgramFlow.csproj">
+      <Project>{81c23aa1-8615-4ea3-9fb0-db9d2f65cebf}</Project>
+      <Name>ProgramFlow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chapter 1\1.2\SynchronizingResources\SynchronizingResources.csproj">
+      <Project>{f16c1f87-7861-4afb-b442-8ef734639e18}</Project>
+      <Name>SynchronizingResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chapter 1\1.4\EventsTests\EventsTests.csproj">
       <Project>{156e427f-dfab-461e-bcad-eaecf160fae4}</Project>
       <Name>EventsTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chapter 1\1.4\UsingDelegates\UsingDelegates.csproj">
+      <Project>{7730e816-919e-4be7-ab2d-4de5818f839e}</Project>
+      <Name>UsingDelegates</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chapter 1\1.4\UsingLambda\UsingLambda.csproj">
+      <Project>{b3a0e989-a27c-465b-898c-bfb9dda5c4b7}</Project>
+      <Name>UsingLambda</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chapter 1\1.5\Exceptions\Exceptions.csproj">
+      <Project>{18137b3f-69cf-47e9-8dfb-2d64d57a9182}</Project>
+      <Name>Exceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chapter 2\2.1\ValueAndReferenceTypes\ValueAndReferenceTypes.csproj">
+      <Project>{febed75f-e852-4a8b-b439-a93b777e8fe5}</Project>
+      <Name>ValueAndReferenceTypes</Name>
     </ProjectReference>
     <ProjectReference Include="..\HelpersLibrary\HelpersLibrary.csproj">
       <Project>{12f855f9-1fd7-4228-9840-d8baeeb0b450}</Project>
       <Name>HelpersLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ProgramFlow\ProgramFlow.csproj">
-      <Project>{81c23aa1-8615-4ea3-9fb0-db9d2f65cebf}</Project>
-      <Name>ProgramFlow</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SynchronizingResources\SynchronizingResources.csproj">
-      <Project>{f16c1f87-7861-4afb-b442-8ef734639e18}</Project>
-      <Name>SynchronizingResources</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ThreadingAndMultitasking\ThreadingAndMultitasking.csproj">
-      <Project>{a0128c4b-500f-4d76-aff6-9a3d88979af6}</Project>
-      <Name>ThreadingAndMultitasking</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UsingDelegates\UsingDelegates.csproj">
-      <Project>{7730e816-919e-4be7-ab2d-4de5818f839e}</Project>
-      <Name>UsingDelegates</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UsingLambda\UsingLambda.csproj">
-      <Project>{b3a0e989-a27c-465b-898c-bfb9dda5c4b7}</Project>
-      <Name>UsingLambda</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

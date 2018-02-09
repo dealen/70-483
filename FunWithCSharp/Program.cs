@@ -1,4 +1,5 @@
 ﻿using EventsTests;
+using Exceptions;
 using FunWithCSharp.Classes;
 using HelpersLibrary;
 using ProgramFlow;
@@ -12,6 +13,7 @@ using ThreadingAndMultitasking.PLINQ;
 using ThreadingAndMultitasking.Tasks;
 using UsingDelegates;
 using UsingLambda;
+using ValueAndReferenceTypes;
 
 namespace FunWithCSharp
 {
@@ -21,7 +23,7 @@ namespace FunWithCSharp
         {
             //StructTest();
             //ReferenceTypeAssignment();
-                        
+
             // 1.1
 
             //SimpleThreads();
@@ -46,11 +48,15 @@ namespace FunWithCSharp
 
             // 1.4
 
-            UsingDelegatesBasics();
+            //UsingDelegatesBasics();
 
-            UsingLambdas();
+            //UsingLambdas();
 
-            EventsCalls();
+            //EventsCalls();
+
+            // 1.5
+
+            Exceptionhandling();
 
             Console.WriteLine("Press enter");
             Console.ReadLine();
@@ -182,6 +188,38 @@ namespace FunWithCSharp
 
             IRun eh = new EventsWithExceptionhandling();
             eh.Run(); 
+        }
+
+        #endregion
+
+        #region 1.5 Exceptions
+
+        private static void Exceptionhandling()
+        {
+            IRun ex = new ExceptionsBasics();
+            //ex.Run();
+
+            ex = new ExceptionWithFinally();
+            //ex.Run();
+
+            ex = new ExceptionInspecting();
+            //ex.Run();
+
+            ex = new ThrowingExceptions();
+            //ex.Run();
+
+            ex = new DispatcherThrowMethod();
+            ex.Run();
+        }
+
+        #endregion
+
+        #region 2.1 Create types
+
+        private void ValueAndReferenceTypesTests()
+        {
+            IRun run = new ValueAndReferenceTypesClass();
+            run.Run();
         }
 
         #endregion
