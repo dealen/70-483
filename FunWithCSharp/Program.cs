@@ -24,6 +24,15 @@ namespace FunWithCSharp
             //StructTest();
             //ReferenceTypeAssignment();
 
+            FirstChapter();
+            SecondChapter();
+
+            Console.WriteLine("Press enter");
+            Console.ReadLine();
+        }
+
+        private static void FirstChapter()
+        {
             // 1.1
 
             //SimpleThreads();
@@ -56,10 +65,8 @@ namespace FunWithCSharp
 
             // 1.5
 
-            Exceptionhandling();
+            //Exceptionhandling();
 
-            Console.WriteLine("Press enter");
-            Console.ReadLine();
         }
 
         #region 1.1. Implementing Multithreading
@@ -214,9 +221,15 @@ namespace FunWithCSharp
 
         #endregion
 
+        private static void SecondChapter()
+        {
+            // 2.1
+            ValueAndReferenceTypesTests();
+        }
+
         #region 2.1 Create types
 
-        private void ValueAndReferenceTypesTests()
+        private static void ValueAndReferenceTypesTests()
         {
             IRun run = new ValueAndReferenceTypesClass();
             run.Run();
