@@ -91,6 +91,10 @@
       <Project>{97d623b2-51ae-49e4-901c-b536690fe87d}</Project>
       <Name>ClassHierarchy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Chapter 2\2.5\ReflectionTests\ReflectionTests.csproj">
+      <Project>{1af90bf5-ab45-47f4-b6e8-0da594c8b50e}</Project>
+      <Name>ReflectionTests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HelpersLibrary\HelpersLibrary.csproj">
       <Project>{12f855f9-1fd7-4228-9840-d8baeeb0b450}</Project>
       <Name>HelpersLibrary</Name>
