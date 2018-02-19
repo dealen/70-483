@@ -1,4 +1,6 @@
-﻿using EventsTests;
+﻿using ClassHierarchy;
+using EnforcingEncapsulation;
+using EventsTests;
 using Exceptions;
 using FunWithCSharp.Classes;
 using HelpersLibrary;
@@ -225,6 +227,12 @@ namespace FunWithCSharp
         {
             // 2.1
             ValueAndReferenceTypesTests();
+
+            //2.3
+            EnforcingEncapsulationTests();
+
+            //2.4
+            ClassHierarchy();
         }
 
         #region 2.1 Create types
@@ -232,6 +240,38 @@ namespace FunWithCSharp
         private static void ValueAndReferenceTypesTests()
         {
             IRun run = new ValueAndReferenceTypesClass();
+            run.Run();
+        }
+
+        #endregion
+
+        #region 2.3 Enforcing Encapsulation
+        
+        private static void EnforcingEncapsulationTests()
+        {
+            IRun run = new ImplicitInterfaceImplementation();
+            run.Run();
+        }
+
+        #endregion
+
+        #region 2.4 Create and implement class hierarchy
+
+        private static void ClassHierarchy()
+        {
+            IRun run = new InstatnionatingConcreteTypeToInterface();
+            run.Run();
+
+            run = new CreatingABaseClass();
+            run.Run();
+
+            run = new OverridingAVirtualMethodtests();
+            run.Run();
+
+            run = new HidingMethodWithTheNewKeyword();
+            run.Run();
+
+            run = new AbstractClassesTest();
             run.Run();
         }
 

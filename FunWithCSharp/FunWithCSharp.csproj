@@ -83,6 +83,14 @@
       <Project>{febed75f-e852-4a8b-b439-a93b777e8fe5}</Project>
       <Name>ValueAndReferenceTypes</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Chapter 2\2.3\EnforcingEncapsulation\EnforcingEncapsulation.csproj">
+      <Project>{15aa4719-390b-41d2-820f-9db65306eaf9}</Project>
+      <Name>EnforcingEncapsulation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chapter 2\2.4\ClassHierarchy\ClassHierarchy.csproj">
+      <Project>{97d623b2-51ae-49e4-901c-b536690fe87d}</Project>
+      <Name>ClassHierarchy</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HelpersLibrary\HelpersLibrary.csproj">
       <Project>{12f855f9-1fd7-4228-9840-d8baeeb0b450}</Project>
       <Name>HelpersLibrary</Name>
