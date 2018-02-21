@@ -164,7 +164,7 @@ namespace SynchronizingResources
 
             Console.WriteLine("Press enter to stop the task");
             Console.ReadLine();
-            source.Cancel();
+            source.Cancel();// zatrzymanie wątku
         }
 
         private void UsingACancellationTokenWithException()
@@ -188,7 +188,7 @@ namespace SynchronizingResources
             {
                 Console.WriteLine("Press enter to stop the task");
                 Console.ReadLine();
-                source.Cancel();
+                source.Cancel();// zatrzymanie wątku
                 task.Wait();
             }
             catch (AggregateException e)
