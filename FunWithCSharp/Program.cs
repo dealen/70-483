@@ -5,6 +5,7 @@ using Exceptions;
 using FunWithCSharp.Classes;
 using HelpersLibrary;
 using ProgramFlow;
+using ReflectionTests;
 using SynchronizingResources;
 using System;
 using ThreadingAndMultitasking;
@@ -233,6 +234,9 @@ namespace FunWithCSharp
 
             //2.4
             ClassHierarchy();
+
+            //2.5
+            ReflectionTests();
         }
 
         #region 2.1 Create types
@@ -272,6 +276,22 @@ namespace FunWithCSharp
             run.Run();
 
             run = new AbstractClassesTest();
+            run.Run();
+        }
+
+        #endregion
+
+        #region 2.5 Reflection
+
+        private static void ReflectionTests()
+        {
+            IRun run = new UsingTypeOfTests();
+            run.Run();
+
+            run = new InformationAboutBaseTypesAndInterfacesOfClass();
+            run.Run();
+
+            run = new CreatingTypesWithRefelction();
             run.Run();
         }
 

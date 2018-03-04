@@ -12,6 +12,11 @@ namespace ReflectionTests
     {
         public void Run()
         {
+            CreatingTypeWothActivatorClass();
+        }
+
+        private void CreatingTypeWothActivatorClass()
+        {
             Assembly assembly = Assembly.Load("ReflectionTests");
 
             var plugins = from type in assembly.GetTypes()

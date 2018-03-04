@@ -41,9 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicAttributes.cs" />
+    <Compile Include="CreatingTypesWithRefelction.cs" />
+    <Compile Include="InformationAboutBaseTypesAndInterfacesOfClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectionOnAssembly.cs" />
     <Compile Include="UsingReflectionOne.cs" />
+    <Compile Include="UsingTypeOfTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\HelpersLibrary\HelpersLibrary.csproj">
