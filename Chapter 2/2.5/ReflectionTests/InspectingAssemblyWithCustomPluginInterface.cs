@@ -1,4 +1,6 @@
 ﻿using HelpersLibrary;
+using System;
+using System.Reflection;
 
 namespace ReflectionTests
 {
@@ -9,11 +11,16 @@ namespace ReflectionTests
         bool Load(MyApplication myApplication);
     }
 
-    class UsingReflectionOne : IRun
+    public class InspectingAssemblyWithCustomPluginInterface : IRun
     {
         public void Run()
         {
-
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
+            var myApp = new MyApplication();
+            MyPlugin m = new MyPlugin();
+            Console.WriteLine(m.Load(myApp));            
+            Console.WriteLine(m.Description);
+            Console.WriteLine(m.Name);
         }
     }
 
@@ -25,6 +32,7 @@ namespace ReflectionTests
 
         public bool Load(MyApplication myApplication)
         {
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
             return true;
         }
     }

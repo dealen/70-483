@@ -6,6 +6,8 @@ using FunWithCSharp.Classes;
 using HelpersLibrary;
 using ProgramFlow;
 using ReflectionTests;
+using ReflectionTests.CodeDOM;
+using ReflectionTests.ExpressionTrees;
 using SynchronizingResources;
 using System;
 using ThreadingAndMultitasking;
@@ -237,6 +239,9 @@ namespace FunWithCSharp
 
             //2.5
             ReflectionTests();
+
+            //2.6
+
         }
 
         #region 2.1 Create types
@@ -314,7 +319,31 @@ namespace FunWithCSharp
 
             run = new AccessTononPublicMembers();
             run.Run();
+
+            run = new InvokingGenericMethod();
+            run.Run();
+
+            run = new CallingMembersOfGenericInterface();
+            run.Run();
+
+            run = new InspectingAssemblyWithCustomPluginInterface();
+            run.Run();
+
+            run = new LoadingAssemblyInfo();
+            run.Run();
+
+            run = new GeneratingHelloWorld();
+            run.Run();
+
+            run = new CreatingHelloWorld();
+            run.Run();
         }
+
+        #endregion
+
+        #region 2.6 Manage the object life cycle
+
+
 
         #endregion
 

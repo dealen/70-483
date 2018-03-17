@@ -42,16 +42,21 @@
   <ItemGroup>
     <Compile Include="AccessTononPublicMembers.cs" />
     <Compile Include="BasicAttributes.cs" />
+    <Compile Include="CallingMembersOfGenericInterface.cs" />
+    <Compile Include="CodeDOM\GeneratingHelloWorld.cs" />
     <Compile Include="CreatingTypesWithRefelction.cs" />
     <Compile Include="DelegatesToEnhancePerformance.cs" />
     <Compile Include="DynamicAndStaticCoupling.cs" />
+    <Compile Include="ExpressionTrees\CreatingHelloWorld.cs" />
     <Compile Include="GettingMembersOfGenericClasses.cs" />
     <Compile Include="InformationAboutBaseTypesAndInterfacesOfClass.cs" />
+    <Compile Include="InvokingGenericMethod.cs" />
+    <Compile Include="LoadingAssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectionOnAssembly.cs" />
     <Compile Include="ReflectionViewingClassMembers.cs" />
     <Compile Include="UsingRefAndOutInReflection.cs" />
-    <Compile Include="UsingReflectionOne.cs" />
+    <Compile Include="InspectingAssemblyWithCustomPluginInterface.cs" />
     <Compile Include="UsingTypeOfTests.cs" />
     <Compile Include="ViewingGenericClassesWithReflection.cs" />
   </ItemGroup>
