@@ -1,10 +1,8 @@
 ﻿using HelpersLibrary;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ReflectionTests
 {
@@ -15,6 +13,7 @@ namespace ReflectionTests
             CreatingTypeUsingActivate();
             CreatringTypeByUsingInvokeFromConstructorInfo();
             CreatringTypeByUsingInvokeFromConstructorInfoInWindowsStore();
+            CreatingDelegate();
         }
 
         /// <summary>
@@ -36,7 +35,7 @@ namespace ReflectionTests
         private void CreatringTypeByUsingInvokeFromConstructorInfo()
         {
             StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
-            
+
             ConstructorInfo ci = typeof(StringBuilder).GetConstructor(new Type[] { typeof(int), typeof(int) });
             object foo = ci.Invoke(new object[] { 200, 300 });
             Console.WriteLine($"Should be StringBuilder and is - {foo.GetType().FullName}");
@@ -50,13 +49,27 @@ namespace ReflectionTests
             StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
 
             ConstructorInfo info = typeof(StringBuilder).GetTypeInfo().DeclaredConstructors.FirstOrDefault(
-                x => 
+                x =>
                     x.GetParameters().Length == 2 &&
                     x.GetParameters()[0].ParameterType == typeof(int) &&
-                    x.GetParameters()[1].ParameterType == typeof(int)  
+                    x.GetParameters()[1].ParameterType == typeof(int)
                 );
             object foo = info.Invoke(new object[] { 522, 600 });
             Console.WriteLine($"Should be StringBuilder and is - {foo.GetType().FullName}");
+        }
+
+        delegate int IntFunc(int x);
+        static int Square(int x) { return x * x; }
+        int Cube(int x) { return x * x * x; }
+
+        private void CreatingDelegate()
+        {
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
+            Delegate staticD = Delegate.CreateDelegate(typeof(IntFunc), typeof(CreatingTypesWithRefelction), "Square");
+            Delegate instanceD = Delegate.CreateDelegate(typeof(IntFunc), new CreatingTypesWithRefelction(), "Cube");
+
+            Console.WriteLine($"{ staticD.DynamicInvoke(3) }");
+            Console.WriteLine($"{ instanceD.DynamicInvoke(3) }");
         }
     }
 }

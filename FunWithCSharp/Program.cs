@@ -293,6 +293,27 @@ namespace FunWithCSharp
 
             run = new CreatingTypesWithRefelction();
             run.Run();
+
+            run = new ReflectionViewingClassMembers();
+            run.Run();
+
+            run = new GettingMembersOfGenericClasses();
+            run.Run();
+
+            run = new DynamicAndStaticCoupling();
+            run.Run();
+
+            run = new UsingRefAndOutInReflection();
+            run.Run();
+
+            run = new ViewingGenericClassesWithReflection();
+            run.Run();
+
+            run = new DelegatesToEnhancePerformance();
+            run.Run();
+
+            run = new AccessTononPublicMembers();
+            run.Run();
         }
 
         #endregion
@@ -330,8 +351,10 @@ namespace FunWithCSharp
 
             // Operator NEW sprawia, że zmienne w strukturze będą miały domyślne wartości.
             // Inaczej nie da się zbudować i uruchomić projektu
-            Point b = new Point();
-            b.Y = 223;
+            Point b = new Point
+            {
+                Y = 223
+            };
             b.Display();
 
             Console.WriteLine("Assigning value types\n");
