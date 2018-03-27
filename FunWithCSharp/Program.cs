@@ -1,4 +1,5 @@
-﻿using ClassHierarchy;
+﻿using AboutString;
+using ClassHierarchy;
 using EnforcingEncapsulation;
 using EventsTests;
 using Exceptions;
@@ -242,6 +243,8 @@ namespace FunWithCSharp
 
             //2.6
 
+            //2.7
+            StringOperations();
         }
 
         #region 2.1 Create types
@@ -344,6 +347,16 @@ namespace FunWithCSharp
         #region 2.6 Manage the object life cycle
 
 
+
+        #endregion
+
+        #region 2.5 String
+
+        private static void StringOperations()
+        {
+            IRun run = new UsingTestWriterAndStringWriter();
+            run.Run();
+        }
 
         #endregion
 
