@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>FunWithCSharp</RootNamespace>
     <AssemblyName>FunWithCSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -94,6 +94,10 @@
     <ProjectReference Include="..\Chapter 2\2.5\ReflectionTests\ReflectionTests.csproj">
       <Project>{1af90bf5-ab45-47f4-b6e8-0da594c8b50e}</Project>
       <Name>ReflectionTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chapter 2\2.7\AboutString\AboutString.csproj">
+      <Project>{6a1bae03-a9e5-4a2b-bdd7-2ff0f51ee915}</Project>
+      <Name>AboutString</Name>
     </ProjectReference>
     <ProjectReference Include="..\HelpersLibrary\HelpersLibrary.csproj">
       <Project>{12f855f9-1fd7-4228-9840-d8baeeb0b450}</Project>
