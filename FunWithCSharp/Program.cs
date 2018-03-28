@@ -9,6 +9,7 @@ using ProgramFlow;
 using ReflectionTests;
 using ReflectionTests.CodeDOM;
 using ReflectionTests.ExpressionTrees;
+using SymetricAndAsymetricEncryptionTests;
 using SynchronizingResources;
 using System;
 using ThreadingAndMultitasking;
@@ -19,6 +20,7 @@ using ThreadingAndMultitasking.PLINQ;
 using ThreadingAndMultitasking.Tasks;
 using UsingDelegates;
 using UsingLambda;
+using ValidateApplicationInputTests;
 using ValueAndReferenceTypes;
 
 namespace FunWithCSharp
@@ -30,8 +32,9 @@ namespace FunWithCSharp
             //StructTest();
             //ReferenceTypeAssignment();
 
-            FirstChapter();
-            SecondChapter();
+            //FirstChapter();
+            //SecondChapter();
+            ThirdChapter();
 
             Console.WriteLine("Press enter");
             Console.ReadLine();
@@ -41,37 +44,37 @@ namespace FunWithCSharp
         {
             // 1.1
 
-            //SimpleThreads();
-            //SimpleTasks();
+            SimpleThreads();
+            SimpleTasks();
 
-            //Parallel();
-            //AsyncAndAwait();
+            Parallel();
+            AsyncAndAwait();
 
-            //PlinqSamples();
+            PlinqSamples();
 
-            //ConcurrentCollectionsSamples();
-            //ConcurrentBagSamples();
-            //ConcurrentStackAndQueueSamples();
+            ConcurrentCollectionsSamples();
+            ConcurrentBagSamples();
+            ConcurrentStackAndQueueSamples();
 
             // 1.2
 
-            //SynchResourcesSamplesTest();
+            SynchResourcesSamplesTest();
 
             // 1.3
 
-            //BooleanStatements();
+            BooleanStatements();
 
             // 1.4
 
-            //UsingDelegatesBasics();
+            UsingDelegatesBasics();
 
-            //UsingLambdas();
+            UsingLambdas();
 
-            //EventsCalls();
+            EventsCalls();
 
             // 1.5
 
-            //Exceptionhandling();
+            Exceptionhandling();
 
         }
 
@@ -359,6 +362,56 @@ namespace FunWithCSharp
         }
 
         #endregion
+
+        private static void ThirdChapter()
+        {
+            ParsingTryParsingAndConverting();
+            UsingRegularExp();
+            ValidatingXMLJSONTests();
+            SymetricAndAsymetricEncryptionTest();
+        }
+
+        #region 3.1 ValidateApplicationInput
+
+        private static void ParsingTryParsingAndConverting()
+        {
+            IRun run = new ParteTryParseConvertTests();
+            run.Run();
+        }
+
+        private static void UsingRegularExp()
+        {
+            IRun run = new UsingRedularExpressions();
+            run.Run();
+        }
+
+        private static void ValidatingXMLJSONTests()
+        {
+            IRun run = new ValidatingJSONandXML();
+            run.Run();
+        }
+
+        #endregion
+
+        #region 3.2. Perform symetric and asymetric encryption
+
+        private static void SymetricAndAsymetricEncryptionTest()
+        {
+            IRun run = new BasicEncryptionAndDecryption();
+            run.Run();
+
+            run = new UsingPublicAndprivateKeyToEncryptAdnDecryptData();
+            run.Run();
+
+            run = new UsingHashingTest();
+            run.Run();
+
+            run = new ManagingAndCreatingCertificates();
+            run.Run();
+        }
+
+        #endregion
+
 
         public static void ReferenceTypeAssignment()
         {

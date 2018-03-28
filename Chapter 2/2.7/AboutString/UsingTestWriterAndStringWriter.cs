@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -20,6 +21,7 @@ namespace AboutString
 
         private void XmlWriterFromStringWriter()
         {
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
             var stringWriter = new StringWriter();
             using (XmlWriter write = XmlWriter.Create(stringWriter))
             {
@@ -45,6 +47,7 @@ namespace AboutString
 
         private void FormattingStrings()
         {
+            StaticValues.WriteMethodName(MethodBase.GetCurrentMethod());
             decimal price = 1234.56M;
             Console.WriteLine(@"{price.ToString(\""C"")}");
             Console.WriteLine($"{price.ToString("C")}");
