@@ -1,4 +1,5 @@
 ﻿using AboutString;
+using AsyncIOOperations;
 using ClassHierarchy;
 using EnforcingEncapsulation;
 using EventsTests;
@@ -22,6 +23,8 @@ using UsingDelegates;
 using UsingLambda;
 using ValidateApplicationInputTests;
 using ValueAndReferenceTypes;
+using WorkingWithFiles;
+using WorkingWithStreams;
 
 namespace FunWithCSharp
 {
@@ -34,7 +37,8 @@ namespace FunWithCSharp
 
             //FirstChapter();
             //SecondChapter();
-            ThirdChapter();
+            //ThirdChapter();
+            FourthChapter();
 
             Console.WriteLine("Press enter");
             Console.ReadLine();
@@ -412,6 +416,44 @@ namespace FunWithCSharp
 
         #endregion
 
+        private static void FourthChapter()
+        {
+            IRun run = new DrivesTest();
+            run.Run();
+
+            run = new DirectoriesTests();
+            run.Run();
+
+            run = new SettingAccessControlForADirectory();
+            run.Run();
+
+            run = new FilesTests();
+            run.Run();
+
+            run = new WorkingWithPaths();
+            run.Run();
+
+            run = new BaseStreamClass();
+            run.Run();
+
+            run = new EncodingAndDecoding();
+            run.Run();
+
+            run = new UsingDifferentTypesOfStream();
+            run.Run();
+
+            run = new CommunicatingOverThenetwork();
+            run.Run();
+
+            // 4.2
+
+            run = new AsyncAwaitWithIO();
+            run.Run();
+
+            run = new RunningIOoperationsInParallel();
+            run.Run();
+        }
+               
 
         public static void ReferenceTypeAssignment()
         {
