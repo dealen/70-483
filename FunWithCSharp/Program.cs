@@ -9,6 +9,7 @@ using ProgramFlow;
 using ReflectionTests;
 using ReflectionTests.CodeDOM;
 using ReflectionTests.ExpressionTrees;
+using SecureStrings;
 using SymetricAndAsymetricEncryptionTests;
 using SynchronizingResources;
 using System;
@@ -369,6 +370,7 @@ namespace FunWithCSharp
             UsingRegularExp();
             ValidatingXMLJSONTests();
             SymetricAndAsymetricEncryptionTest();
+            ManagingAssemblies();
         }
 
         #region 3.1 ValidateApplicationInput
@@ -412,6 +414,15 @@ namespace FunWithCSharp
 
         #endregion
 
+        #region 3.3 Manage assemblies
+
+        private static void ManagingAssemblies()
+        {
+            IRun run = new SecureStringsTest();
+            run.Run();
+        }
+
+        #endregion 
 
         public static void ReferenceTypeAssignment()
         {

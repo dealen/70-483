@@ -111,6 +111,10 @@
       <Project>{16969a08-0bab-4de0-b3c2-85b80f96dc06}</Project>
       <Name>SymetricAndAsymetricEncryptionTests</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Chapter 3\3.3\SecureStrings\SecureStrings\SecureStrings.csproj">
+      <Project>{94469cd9-1b9e-426b-a721-22cce9680f8f}</Project>
+      <Name>SecureStrings</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HelpersLibrary\HelpersLibrary.csproj">
       <Project>{12f855f9-1fd7-4228-9840-d8baeeb0b450}</Project>
       <Name>HelpersLibrary</Name>
