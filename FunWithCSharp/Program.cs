@@ -5,6 +5,7 @@ using EventsTests;
 using Exceptions;
 using FunWithCSharp.Classes;
 using HelpersLibrary;
+using LinqTests;
 using ProgramFlow;
 using ReflectionTests;
 using ReflectionTests.CodeDOM;
@@ -35,7 +36,9 @@ namespace FunWithCSharp
 
             //FirstChapter();
             //SecondChapter();
-            ThirdChapter();
+            //ThirdChapter();
+
+            ChapterFourth();
 
             Console.WriteLine("Press enter");
             Console.ReadLine();
@@ -421,6 +424,21 @@ namespace FunWithCSharp
             IRun run = new SecureStringsTest();
             run.Run();
         }
+
+        #endregion
+
+        #region 4.3
+
+        private static void ChapterFourth()
+        {
+            IRun run = new LinqFunctionsTests();
+            run.Run();
+
+            run = new UsingLinqWithXML();
+            run.Run();
+        }
+
+
 
         #endregion 
 

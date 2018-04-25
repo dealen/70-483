@@ -115,6 +115,14 @@
       <Project>{94469cd9-1b9e-426b-a721-22cce9680f8f}</Project>
       <Name>SecureStrings</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Chapter 4\4.1\AsyncIOOperations\AsyncIOOperations.csproj">
+      <Project>{570e0264-d8d3-4f18-998e-b91e2163ec29}</Project>
+      <Name>AsyncIOOperations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chapter 4\4.3\LinqTests\LinqTests.csproj">
+      <Project>{bdecffa9-7c90-4969-841f-30c25fd6165c}</Project>
+      <Name>LinqTests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HelpersLibrary\HelpersLibrary.csproj">
       <Project>{12f855f9-1fd7-4228-9840-d8baeeb0b450}</Project>
       <Name>HelpersLibrary</Name>
