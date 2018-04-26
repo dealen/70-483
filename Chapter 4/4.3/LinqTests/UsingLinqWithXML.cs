@@ -94,14 +94,14 @@ namespace LinqTests
                 }
             }
 
-            IEnumerable<string> parsedNodes = from p in doc.Descendants("person")
-                                              select (string)p.Attribute("firstname")
-                                              + " " + (string)p.Attribute("lastname");
+            //IEnumerable<string> parsedNodes = from p in doc.Descendants("person")
+            //                                  select (string)p.Attribute("firstname")
+            //                                  + " " + (string)p.Attribute("lastname");
 
-            foreach (var item in root.Descendants("person"))
-            {
-                Console.WriteLine($"");
-            }
+            //foreach (var item in root.Descendants("person"))
+            //{
+            //    Console.WriteLine($"");
+            //}
         }
 
 

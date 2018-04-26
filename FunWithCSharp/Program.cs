@@ -11,6 +11,7 @@ using ReflectionTests;
 using ReflectionTests.CodeDOM;
 using ReflectionTests.ExpressionTrees;
 using SecureStrings;
+using SerializationTests;
 using SymetricAndAsymetricEncryptionTests;
 using SynchronizingResources;
 using System;
@@ -38,7 +39,7 @@ namespace FunWithCSharp
             //SecondChapter();
             //ThirdChapter();
 
-            ChapterFourth();
+            FourthChapter();
 
             Console.WriteLine("Press enter");
             Console.ReadLine();
@@ -427,9 +428,15 @@ namespace FunWithCSharp
 
         #endregion
 
-        #region 4.3
+        private static void FourthChapter()
+        {
+            UsingLinqQueries();
+            SerializationAndDeserialization();
+        }
 
-        private static void ChapterFourth()
+        #region 4.3 LINQ
+
+        private static void UsingLinqQueries()
         {
             IRun run = new LinqFunctionsTests();
             run.Run();
@@ -438,9 +445,20 @@ namespace FunWithCSharp
             run.Run();
         }
 
+        #endregion
 
+        #region 4.4 Serialization and deserialization
 
-        #endregion 
+        private static void SerializationAndDeserialization()
+        {
+            IRun run = new UsingXMLSerializer();
+            run.Run();
+
+            run = new BinarySerialization();
+            run.Run();
+        }
+
+        #endregion
 
         public static void ReferenceTypeAssignment()
         {

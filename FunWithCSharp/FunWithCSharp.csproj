@@ -123,6 +123,10 @@
       <Project>{bdecffa9-7c90-4969-841f-30c25fd6165c}</Project>
       <Name>LinqTests</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Chapter 4\4.4\SerializationTests\SerializationTests.csproj">
+      <Project>{4f937e28-2ff7-4747-aa96-a1dd464e38a0}</Project>
+      <Name>SerializationTests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HelpersLibrary\HelpersLibrary.csproj">
       <Project>{12f855f9-1fd7-4228-9840-d8baeeb0b450}</Project>
       <Name>HelpersLibrary</Name>
